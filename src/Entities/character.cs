@@ -2,11 +2,9 @@ namespace projetoRPG.src.Entities
 {
     public class Character
     {
-        public Character(string Name, int level, string Classe)
+        public Character(string Name)
         {
             this.Name = Name;
-            this.Level = level;
-            this.Class = Classe;
         }
         public string Name;
 

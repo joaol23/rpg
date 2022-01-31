@@ -2,11 +2,11 @@ namespace projetoRPG.src.Entities
 {
     public class Knight : Character
     {
-        public Knight(string Name, int level, string Classe) : base(Name, level, Classe)
+        public Knight(string Name) : base(Name)
         {
             this.Name = Name;
-            this.Level = level;
-            this.Class = Classe;
+            this.Level = 1;
+            this.Class = "Knight";
         }
     }
 }

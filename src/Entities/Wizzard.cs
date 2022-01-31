@@ -2,11 +2,11 @@ namespace projetoRPG.src.Entities
 {
     public class Wizzard : Character
     {
-        public Wizzard(string Name, int level, string Classe) : base(Name, level, Classe)
+        public Wizzard(string Name) : base(Name)
         {
             this.Name = Name;
-            this.Level = level;
-            this.Class = Classe;            
+            this.Level = 1;
+            this.Class = "Wizzard";            
         }
     }
 }
