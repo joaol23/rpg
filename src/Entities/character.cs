@@ -11,10 +11,12 @@ namespace projetoRPG.src.Entities
         public int Level;
 
         public string Class;
+        public int Life;
+        public int MP;
 
         public override string ToString()
         {
-            return this.Name + " " + this.Level + " " + this.Class;
+            return this.Name + " level:" + this.Level + " " + this.Class + " " + this.Life + " de vida " + this.MP + " de mana";
         }
     }
 }

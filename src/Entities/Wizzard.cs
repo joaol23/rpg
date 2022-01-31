@@ -6,7 +6,9 @@ namespace projetoRPG.src.Entities
         {
             this.Name = Name;
             this.Level = 1;
-            this.Class = "Wizzard";            
+            this.Class = "Wizzard";     
+            this.Life = 70;
+            this.MP = 60;       
         }
     }
 }
