@@ -7,6 +7,8 @@ namespace projetoRPG.src.Entities
             this.Name = Name;
             this.Level = 1;
             this.Class = "Gunslinger";
+            this.Life = 90;
+            this.MP = 20;
         }
     }
 }

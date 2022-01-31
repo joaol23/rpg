@@ -9,7 +9,7 @@ public class Program
     {
         return new string[] { "Knight", "Wizzard", "Gunslinger", "Ranger" };
     }
-    static void ChooseCharacter()
+    static object ChooseCharacter()
     {
         WriteLine("======== Welcome to the RPG Project ========\n======== Please create your character! ========");
 
@@ -19,12 +19,20 @@ public class Program
         {
             WriteLine(i + 1 + " - " + classes[i]);
         }
-        WriteLine("x - sair");
+        WriteLine("5 - Info");
+        WriteLine("x - Leave");
 
         var choice = ReadLine();
+
+        if (choice == "x")
+        {
+            return false;
+        }
         var Name = ChooseName();
 
         var character = ChooseClass(choice, Name);
+
+        return character;
     }
 
     static string ChooseName()
@@ -36,37 +44,41 @@ public class Program
     }
     static object ChooseClass(string choice, string name)
     {
-        while (choice.ToUpper() != "X")
+        if (choice == "1")
         {
-            if (choice == "1")
-            {
-                Knight hero = new Knight(name);
-                return hero;
-            }
-            else if (choice == "2")
-            {
-                Wizzard mage = new Wizzard(name);
-                return mage;
-            }
-            else if (choice == "3")
-            {
-                Gunslinger gunslinger = new Gunslinger(name);
-                return gunslinger;
-            }
-            else if (choice == "4")
-            {
-
-                Ranger ranger = new Ranger(name);
-                return ranger;
-            }else{
-                throw new ArgumentException();
-            }
+            Knight hero = new Knight(name);
+            return hero;
         }
-        return false;
+        else if (choice == "2")
+        {
+            Wizzard mage = new Wizzard(name);
+            return mage;
+        }
+        else if (choice == "3")
+        {
+            Gunslinger gunslinger = new Gunslinger(name);
+            return gunslinger;
+        }
+        else if (choice == "4")
+        {
+
+            Ranger ranger = new Ranger(name);
+            return ranger;
+        }
+        else
+        {
+            throw new ArgumentException();
+        }
     }
 
     static void Main()
     {
-        ChooseCharacter();
+        var character = ChooseCharacter();
+        if (!character.Equals(false))
+        {
+            WriteLine();
+            WriteLine("Seu personagem");
+            WriteLine(character);
+        }
     }
 }
