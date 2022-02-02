@@ -21,6 +21,7 @@ public class Program
         }
         WriteLine("5 - Info");
         WriteLine("x - Leave");
+        WriteLine();
 
         var choice = ReadLine();
 
@@ -28,11 +29,19 @@ public class Program
         {
             return false;
         }
+
+        // if (choice == "5")
+        // {
+
+        // }
+        // else
+        // {
         var Name = ChooseName();
 
         var character = ChooseClass(choice, Name);
 
         return character;
+        // }
     }
 
     static string ChooseName()
@@ -47,22 +56,25 @@ public class Program
         if (choice == "1")
         {
             Knight hero = new Knight(name);
+            hero.SetAttacks();
             return hero;
         }
         else if (choice == "2")
         {
             Wizzard mage = new Wizzard(name);
+            mage.SetAttacks();
             return mage;
         }
         else if (choice == "3")
         {
             Gunslinger gunslinger = new Gunslinger(name);
+            gunslinger.SetAttacks();
             return gunslinger;
         }
         else if (choice == "4")
         {
-
             Ranger ranger = new Ranger(name);
+            ranger.SetAttacks();
             return ranger;
         }
         else
