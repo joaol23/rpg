@@ -15,5 +15,11 @@ namespace projetoRPG.src.Actions
 
         public int Damage;
         public int MinLevel;
+
+        
+        public override string ToString()
+        {
+            return this.Name + ": Dano - " + this.Damage + " Mana - " + this.MPLost + " level:" + this.MinLevel;
+        }
     }
 }
