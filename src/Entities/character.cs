@@ -22,5 +22,23 @@ namespace projetoRPG.src.Entities
             + this.Class + " " + this.Life + " de vida " 
             + this.MP + " de mana";
         }
+
+        public string Info()
+        {
+            var message = "     A classe " + this.Class + " possui:\n"
+            + "         " + this.Life + "/" + this.Life + " de vida.\n"
+            + "         " + this.MP + "/" + this.MP + " de mana.\n\n"
+            + "    Ataques:\n\n";
+
+            for (var i = 0;i < this.Attacks.Length; i++){
+                message += "    " + this.Attacks[i] + "    ";
+                if(i % 2 != 0){
+                    message += "\n";
+                }
+            }
+
+            
+            return message;
+        }
     }
 }

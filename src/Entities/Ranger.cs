@@ -16,10 +16,10 @@ namespace projetoRPG.src.Entities
         {
             Attack[] attacks = new Attack[4];
 
-            attacks[0] = new Attack("teste", 1, 1, 1);
-            attacks[1] = new Attack("teste", 1, 1, 2);
-            attacks[2] = new Attack("teste", 1, 1, 2);
-            attacks[3] = new Attack("teste", 1, 1, 2);
+            attacks[0] = new Attack("Arrow Shoot", 0, 8, 1);
+            attacks[1] = new Attack("Magical Arrow", 7, 17, 2);
+            attacks[2] = new Attack("Healing", 15, 14, 3);
+            attacks[3] = new Attack("Star Arrows", 20, 30, 4);
 
             this.Attacks = attacks;
         }

@@ -19,8 +19,8 @@ namespace projetoRPG.src.Entities
 
             attacks[0] = new Attack("FireBall", 5, 7, 1);
             attacks[1] = new Attack("Ice Spikes", 10, 15, 2);
-            attacks[2] = new Attack("Toxic Smoke", 12, 17, 3);
-            attacks[3] = new Attack("Black Hole", 20, 25, 4);
+            attacks[2] = new Attack("Toxic Smoke", 12, 20, 3);
+            attacks[3] = new Attack("Black Hole", 20, 28, 4);
 
             this.Attacks = attacks;
         }
