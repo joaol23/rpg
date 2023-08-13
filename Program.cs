@@ -126,6 +126,10 @@ public class Program
         }
     }
 
+    static void SetMonsters(object[] character)
+    {
+        WriteLine(character[0]);
+    }
     static void Main()
     {
         var character = ChooseCharacter();
@@ -134,6 +138,8 @@ public class Program
             WriteLine();
             WriteLine("Seu personagem");
             WriteLine(character);
+            
         }
+
     }
 }

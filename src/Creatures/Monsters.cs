@@ -6,6 +6,8 @@ namespace projetoRPG.src.Creatures
 
         public int Life;
 
-        public string Class;
+        public char Rank;
+
+        public object[] Attacks;
     }
 }
